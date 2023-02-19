@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  consoleappproducer:
+    image: ${DOCKER_REGISTRY-}consoleappproducer
+    build:
+      context: .
+      dockerfile: ConsoleAppProducer/Dockerfile
+
+  webapplicationconsumer:
+    image: ${DOCKER_REGISTRY-}webapplicationconsumer
+    build:
+      context: .
+      dockerfile: WebApplicationConsumer/Dockerfile
+
